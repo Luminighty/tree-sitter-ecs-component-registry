@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-ecs-component-registry
-        VERSION "0.1.0"
+        VERSION "0.8.0"
         DESCRIPTION "EcsComponentRegistry grammar for tree-sitter"
         HOMEPAGE_URL "https://github.com/luminighty/tree-sitter-ecs-component-registry"
         LANGUAGES C)
