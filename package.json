@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-ecs-component-registry",
-  "version": "0.8.2",
+  "version": "0.9.0",
   "description": "EcsComponentRegistry grammar for tree-sitter",
   "repository": "https://github.com/luminighty/tree-sitter-ecs-component-registry",
   "license": "MIT",

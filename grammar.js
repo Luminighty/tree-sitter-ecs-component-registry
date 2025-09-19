@@ -17,13 +17,16 @@ module.exports = grammar({
 
     component: $ => seq(
       $.component_name,
-      "\n",
-      repeat(seq($.component_data, "\n"))
+      repeat("\n"),
+      repeat($.component_data)
     ),
 
-    component_data: $ => choice(
-      prec(10, $.tag),
-      $.field
+    component_data: $ => seq(
+      choice(
+        prec(10, $.tag),
+        $.field,
+      ),
+      repeat("\n")
     ),
 
     component_name: $ => seq('[', $.identifier, ']'),
@@ -39,7 +42,7 @@ module.exports = grammar({
     tag_storage_limit: $ => seq("limit", "=", $.number),
 
 
-    field: $ => /[^\r\n\[@]+/,
+    field: $ => /[^@\n\[]+/,
 
     identifier: $ => /[a-zA-Z_]+/,
 
